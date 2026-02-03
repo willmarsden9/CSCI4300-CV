@@ -1,95 +1,171 @@
 body {
-
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
 
 /****************   Nav Section **********************/
 nav {
-	
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 12px 18px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
 }
 
 /***********************  Footer Section   **************************/
 footer {
-	
+  background-color: #1f2937;
+  color: #ffffff;
+  padding: 12px 18px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 /*********** Splash Page ************************/
 header {
-
+  background-color: #f3f4f6;
+  padding: 24px 18px;
+  text-align: center;
 }
 
 header h1 {
-  
+  font-family: "Georgia", serif;
+  font-size: 2.2rem;
+  color: #111827;
+  margin: 0 0 12px 0;
 }
 
 header img {
+  border-radius: 12px;
+  border: 3px solid #111827;
 }
 
+/* address + tagline */
 .address {
- 
+  text-align: center;
+  margin: 14px 18px 6px 18px;
+  color: #111827;
 }
 
 .tagline {
-  
+  text-align: center;
+  margin: 0 18px 14px 18px;
+  color: #374151;
 }
 
 /************* Sections ********************/
 hr {
-
+  margin: 18px;
 }
 
 section h3 {
-  
+  font-family: "Georgia", serif;
+  color: #111827;
+  margin-top: 0;
 }
 
 section dl {
-  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 18px;
 }
 
 section ul {
-
+  list-style-type: square;
 }
 
 section a {
-
+  color: #2563eb;
+  text-decoration: none;
 }
 
 section a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
 }
 
 /**************   Projects   *****************/
 .three-col {
-	
-}
-
-.card img {
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
 .card {
-  
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 10px;
 }
 
 /**************   Responsiveness   *****************/
 @media (max-width: 680px) {
-    nav {
-      
-    }
+  nav {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
 
-    .three-col {
-      
-    }
+  .three-col {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
 }
 
 /**************   Contact Page   *****************/
 .one-col {
-
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 18px;
 }
 
 input {
-  
-
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 textarea {
-   
+  width: 100%;
+  min-height: 120px;
+  padding: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-sizing: border-box;
 }
