@@ -1,39 +1,59 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  line-height: 1.5;
+  font-family: "Inter", Arial, sans-serif;
+  line-height: 1.55;
+  background-color: #f6f7fb;
+  color: #111827;
 }
 
 /****************   Nav Section **********************/
 nav {
-  background-color: #1f2937;
+  background-color: #0b1220;
   color: #ffffff;
-  padding: 12px 18px;
+  padding: 14px 18px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav p {
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: 0.2px;
 }
 
 nav a {
   color: #ffffff;
   text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background: rgba(255,255,255,0.14);
 }
 
 /***********************  Footer Section   **************************/
 footer {
-  background-color: #1f2937;
+  background-color: #0b1220;
   color: #ffffff;
-  padding: 12px 18px;
+  padding: 14px 18px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
+}
+
+footer p {
+  margin: 0;
 }
 
 footer a {
@@ -45,66 +65,113 @@ footer a:hover {
   text-decoration: underline;
 }
 
+footer i {
+  font-size: 1.2rem;
+}
+
 /*********** Splash Page ************************/
 header {
-  background-color: #f3f4f6;
-  padding: 24px 18px;
+  padding: 42px 18px 30px 18px;
   text-align: center;
+  background: linear-gradient(135deg, #0b1220, #1f4fd6);
+  color: #ffffff;
 }
 
 header h1 {
-  font-family: "Georgia", serif;
-  font-size: 2.2rem;
-  color: #111827;
-  margin: 0 0 12px 0;
+  font-family: "Inter", Arial, sans-serif;
+  color: #ffffff;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin: 0 0 14px 0;
 }
 
+
 header img {
-  border-radius: 12px;
-  border: 3px solid #111827;
+  border-radius: 999px;
+  border: 4px solid rgba(255,255,255,0.9);
+  box-shadow: 0 14px 35px rgba(0,0,0,0.25);
 }
 
 /* address + tagline */
 .address {
+  max-width: 980px;
+  margin: 18px auto 6px auto;
+  padding: 0 18px;
   text-align: center;
-  margin: 14px 18px 6px 18px;
+  font-weight: 600;
   color: #111827;
 }
 
 .tagline {
+  max-width: 980px;
+  margin: 0 auto 18px auto;
+  padding: 0 18px;
   text-align: center;
-  margin: 0 18px 14px 18px;
   color: #374151;
 }
 
 /************* Sections ********************/
 hr {
-  margin: 18px;
+  margin: 18px auto;
+  max-width: 980px;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+section {
+  max-width: 980px;
+  margin: 18px auto;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid #e6e8ef;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+section h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  letter-spacing: -0.2px;
 }
 
 section h3 {
-  font-family: "Georgia", serif;
-  color: #111827;
-  margin-top: 0;
+  font-family: "Inter", Arial, sans-serif;
+  font-weight: 800;
+  color: #0b1220;
+  margin: 0 0 10px 0;
 }
 
 section dl {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 8px 18px;
+  gap: 10px 20px;
+  margin: 0;
+}
+
+section dt {
+  font-weight: 600;
+}
+
+section dd {
+  margin: 0;
+  color: #374151;
 }
 
 section ul {
   list-style-type: square;
+  padding-left: 18px;
+  margin: 8px 0 0 0;
+  color: #111827;
 }
 
 section a {
-  color: #2563eb;
+  color: #1f4fd6;
   text-decoration: none;
+  font-weight: 600;
 }
 
 section a:hover {
-  color: #1d4ed8;
+  color: #163db5;
   text-decoration: underline;
 }
 
@@ -113,20 +180,27 @@ section a:hover {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  margin-top: 10px;
 }
 
 .card {
   background-color: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border: 1px solid #e6e8ef;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.12);
 }
 
 .card img {
   width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
   display: block;
   margin-bottom: 10px;
 }
@@ -135,37 +209,73 @@ section a:hover {
 @media (max-width: 680px) {
   nav {
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     text-align: center;
+  }
+    .three-col {
+    grid-template-columns: 1fr;
+  }
+
+  section dl {
+    grid-template-columns: 1fr;
   }
 
   .three-col {
     grid-template-columns: 1fr;
-    max-width: 420px;
-    margin: 0 auto;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 /**************   Contact Page   *****************/
 .one-col {
-  max-width: 520px;
+  max-width: 720px;
   margin: 0 auto;
   padding: 18px;
 }
 
+form {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+}
+
 input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
+  padding: 10px 12px;
+  border: 1px solid #d5d8e1;
+  border-radius: 12px;
   box-sizing: border-box;
+  font-family: inherit;
+  background: #fbfbfd;
 }
 
 textarea {
   width: 100%;
-  min-height: 120px;
-  padding: 10px;
-  border: 1px solid #d1d5db;
-  border-radius: 8px;
+  min-height: 130px;
+  padding: 10px 12px;
+  border: 1px solid #d5d8e1;
+  border-radius: 12px;
   box-sizing: border-box;
+  font-family: inherit;
+  background: #fbfbfd;
+  resize: vertical;
+}
+
+button {
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  background: #1f4fd6;
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #163db5;
 }
